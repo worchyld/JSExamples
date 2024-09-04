@@ -11,6 +11,13 @@
 <script setup>
     import { ref } from 'vue'
     
+    // text input
+    const text = ref('')
+    function onInput(e) {
+      text.value = e.target.value
+    }
+
+    // counter
     const count = ref(0)
     
     function increment() {
@@ -22,7 +29,6 @@
     </script>
     
     <template>
-      <!-- make this button work -->
       <p>
         Count is: {{ count }}
       </p>
@@ -32,7 +38,11 @@
       </p>
       
     </template>
-    
+
+    <template>
+      <input :value="text" @input="onInput" placeholder="Type here">
+      <p>{{ text }}</p>
+    </template>
 
 </body>
 </html>
