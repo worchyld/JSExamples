@@ -6,21 +6,11 @@
     <title>First VueJS projec</title>
 </head>
 <body>
-    <script type="importmap">
-        {
-          "imports": {
-            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-          }
-        }
-      </script>
-
     <div id="app">{{ message }}</div>
 
-
     <script type="module">
-        //import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-        import { createApp, ref } from 'vue'
-      
+        import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+              
         createApp({
           setup() {
             const message = ref('Hello Vue!')
