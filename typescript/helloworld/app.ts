@@ -6,3 +6,4 @@ heading.textContent = message;
 
 // add to document
 document.body.appendChild(heading);
+
