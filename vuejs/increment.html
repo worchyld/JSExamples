@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Increment</title>
+</head>
+<body>
+
+<script setup>
+    import { ref } from 'vue'
+    
+    const count = ref(0)
+    
+    function increment() {
+          count.value++  
+    }
+    function decrement() {
+      count.value--
+    }
+    </script>
+    
+    <template>
+      <!-- make this button work -->
+      <p>
+        Count is: {{ count }}
+      </p>
+      <p>
+      <button @click="increment">Click +</button><br>
+      <button @click="decrement">Click -</button>
+      </p>
+      
+    </template>
+    
+
+</body>
+</html>
