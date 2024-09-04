@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>First VueJS projec</title>
 </head>
 <body>
@@ -11,12 +10,12 @@
     <div id="app">{{ message }}</div>
     
 
-    <script type="text/javascript">
-        const { createApp, ref } = Vue
+    <script type="module">
+        import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
       
         createApp({
           setup() {
-            const message = ref('Hello vue!')
+            const message = ref('Hello Vue!')
             return {
               message
             }
